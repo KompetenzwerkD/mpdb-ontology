@@ -1,0 +1,44 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mpdb_item_sets: <http://37.120.165.192:8008/api/item_sets/> .
+@prefix mpdb_items: <http://37.120.165.192:8008/api/items/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+mpdb_items:5243 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5094 ;
+    skos:prefLabel "Микроскопия"@ru .
+
+mpdb_items:5244 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5094 .
+
+mpdb_items:5245 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5094 .
+
+mpdb_items:5246 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5094 .
+
+mpdb_items:5247 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5094 .
+
+mpdb_items:5248 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5094 ;
+    skos:prefLabel "Изотопный анализ (Pb, Cu, Ag)"@ru .
+
+mpdb_items:5249 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5094 ;
+    skos:prefLabel "Рамановская спектроскопия"@ru .
+
+mpdb_items:5250 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5094 ;
+    skos:prefLabel "ИК-Фурье спектрометр"@ru .
+
+mpdb_items:5251 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5094 ;
+    skos:prefLabel "Рентген"@ru .
+
+mpdb_items:5252 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5094 ;
+    skos:prefLabel "Другое"@ru .
+
+mpdb_item_sets:5094 a skos:ConceptScheme ;
+    dcterms:title "Analysemethoden"@de .
+

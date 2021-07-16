@@ -1,0 +1,23 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mpdb_item_sets: <http://37.120.165.192:8008/api/item_sets/> .
+@prefix mpdb_items: <http://37.120.165.192:8008/api/items/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+mpdb_items:5278 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5183 ;
+    skos:prefLabel "vollständig"@de,
+        "полное"@ru .
+
+mpdb_items:5279 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5183 ;
+    skos:prefLabel "fragmentiert"@de,
+        "фрагментированное"@ru .
+
+mpdb_items:5280 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5183 ;
+    skos:prefLabel "ergänzt"@de,
+        "фрагментированное"@ru .
+
+mpdb_item_sets:5183 a skos:ConceptScheme ;
+    dcterms:title "Zustände"@de .
+

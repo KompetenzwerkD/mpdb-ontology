@@ -1,0 +1,49 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mpdb_item_sets: <http://37.120.165.192:8008/api/item_sets/> .
+@prefix mpdb_items: <http://37.120.165.192:8008/api/items/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+mpdb_items:5222 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:66 ;
+    skos:prefLabel "Сосуд"@ru .
+
+mpdb_items:5223 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:66 ;
+    skos:prefLabel "Оружие"@ru .
+
+mpdb_items:5224 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:66 ;
+    skos:prefLabel "Конская сбруя"@ru .
+
+mpdb_items:5225 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:66 ;
+    skos:prefLabel "Ремень"@ru .
+
+mpdb_items:5226 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:66 ;
+    skos:prefLabel "Украшение"@ru .
+
+mpdb_items:5227 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:66 ;
+    skos:prefLabel "Sonstiges Kleidungszubehör"@de,
+        "Другие принадлежности костюма"@ru .
+
+mpdb_items:5228 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:66 ;
+    skos:prefLabel "Монета"@ru .
+
+mpdb_items:5229 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:66 ;
+    skos:prefLabel "Прибор"@ru .
+
+mpdb_items:5230 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:66 ;
+    skos:prefLabel "Пластинка-обкладка"@ru .
+
+mpdb_items:5231 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:66 ;
+    skos:prefLabel "Другое"@ru .
+
+mpdb_item_sets:66 a skos:ConceptScheme ;
+    dcterms:title "Sachgruppen"@de .
+

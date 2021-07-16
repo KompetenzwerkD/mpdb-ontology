@@ -1,0 +1,36 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mpdb_item_sets: <http://37.120.165.192:8008/api/item_sets/> .
+@prefix mpdb_items: <http://37.120.165.192:8008/api/items/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+mpdb_items:5271 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5103 ;
+    skos:prefLabel "Литьё"@ru .
+
+mpdb_items:5272 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5103 ;
+    skos:prefLabel "Ковка"@ru .
+
+mpdb_items:5273 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5103 ;
+    skos:prefLabel "Тиснение"@ru .
+
+mpdb_items:5274 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5103 ;
+    skos:prefLabel "Чеканка формы "@ru .
+
+mpdb_items:5275 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5103 ;
+    skos:prefLabel "Чеканка рельефа"@ru .
+
+mpdb_items:5276 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5103 ;
+    skos:prefLabel "Чеканка штемпелем"@ru .
+
+mpdb_items:5277 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5103 ;
+    skos:prefLabel "Высечение"@ru .
+
+mpdb_item_sets:5103 a skos:ConceptScheme ;
+    dcterms:title "Herstellungstechniken"@de .
+

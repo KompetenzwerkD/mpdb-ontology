@@ -1,0 +1,18 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mpdb_item_sets: <http://37.120.165.192:8008/api/item_sets/> .
+@prefix mpdb_items: <http://37.120.165.192:8008/api/items/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+mpdb_items:5523 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5125 ;
+    skos:prefLabel "Original"@de,
+        "Подлинник"@ru .
+
+mpdb_items:5524 a skos:Concept ;
+    skos:inScheme mpdb_item_sets:5125 ;
+    skos:prefLabel "Kopie"@de,
+        "Копия "@ru .
+
+mpdb_item_sets:5125 a skos:ConceptScheme ;
+    dcterms:title "Überlieferungsformen"@de .
+

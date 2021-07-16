@@ -1,0 +1,304 @@
+@prefix : <http://vocab.kompetenzwerkd.saw-leipzig.de/> .
+@prefix mpo: <http://vocab.kompetenzwerkd.saw-leipzig.de/mpo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://vocab.kompetenzwerkd.saw-leipzig.de/mpo/> .
+
+<http://vocab.kompetenzwerkd.saw-leipzig.de/> a <http://purl.org/vocommons/voaf#Vocabulary>, owl:Ontology ;
+    rdfs:label "Archival Object Description Vocabulary"@en ;
+     dbo:subtitle "A vocabulary for describing archvival objects"@en ;
+     vann:preferredNamespacePrefix "mpo" ;
+     vann:preferredNamespaceUri "http://vocab.kompetenzwerkd.saw-leipzig.de/" ;
+     owl:versionInfo "0.1" ;
+     dct:creator "Peter Mhleder" ;
+     terms:modified "2021-02-02"^^xsd:date ;
+     terms:created "2021-02-02"^^xsd:date ;
+     terms:license "CC0 1.0 Universal";
+     doap:homepage <https://github.com/kompetenzwerkd/malaja-schema> .
+
+
+mpo:ArchiveEntity rdf:type owl:Class ;
+	rdfs:subClassOf owl:Thing , crm:E1_CRM_Entity ;
+	rdfs:comment "All archival related things."@en ;                    
+    rdfs:label "ArchiveEntity"@en .
+
+## main classes
+
+mpo:Objekt a owl:Class ;
+	rdfs:subClassOf mpo:ArchiveEntity ;
+	rdfs:comment """Represents an action Object in the archvie"""@en ;
+	rdfs:label  "Objekt"@de .
+
+mpo:Publikation a owl:Class ;
+	rdfs:subClassOf mpo:ArchiveEntity ;
+	rdfs:label  "Publikation"@de .
+
+mpo:Literatur a owl:Class ;
+    rdfs:subClassOf mpo:ArchiveEntity ;
+    rdfs:label "Literatur"@de .
+
+mpo:Literaturverweis a owl:Class ;
+    rdfs:subClassOf mpo:ArchiveEntity ;
+    rdfs:label "Literaturverweis"@de .
+
+mpo:Archivalie a owl:Class ;
+    rdfs:subClassOf mpo:ArchiveEntity ;
+    rdfs:label "Archivalie"@de .
+
+mpo:Funderfassung a owl:Class ;
+    rdfs:subClassOf mpo:ArchiveEntity ;
+    rdfs:label "Funderfassung"@de .
+
+mpo:Objektanalyse a owl:Class ;
+    rdfs:subClassOf mpo:ArchiveEntity ;
+    rdfs:label "Objektanalyse"@de .
+
+mpo:Herstellungsprozess a owl:Class ;
+    rdfs:subClassOf mpo:ArchiveEntity ;
+    rdfs:label "Herstellungsprozess"@de .
+
+mpo:Herstellungsdetail a owl:Class ;
+    rdfs:subClassOf mpo:ArchiveEntity ;
+    rdfs:label "Herstellungsdetail"@de .
+
+mpo:Institution a owl:Class ;
+    rdfs:subClassOf mpo:ArchiveEntity ;
+    rdfs:label "Institution"@de .
+
+mpo:Bilddokument a owl:Class ;
+    rdfs:subClassOf mpo:ArchiveEntity ;
+    rdfs:label "Bilddokument"@de .
+
+mpo:Schriftdokument a owl:Class ;
+    rdfs:subClassOf mpo:ArchiveEntity ;
+    rdfs:label "Schriftdokument"@de .
+
+mpo:Rekonstruktion a owl:Class ;
+    rdfs:subClassOf mpo:ArchiveEntity ;
+    rdfs:label "Rekonstruktion"@de .
+
+
+### object properties
+
+mpo:haltendeInstitution a owl:ObjectProperty ;
+    rdfs:domain mpo:Object ;
+    rdfs:label "Museum"@de .
+
+mpo:hatEremitageInventarnummer a owl:ObjectProperty ;
+    rdfs:domain mpo:Object ;
+    rdfs:label "Inventarnummer Eremitage"@de .
+
+mpo:hatEinlieferungsdatum a owl:ObjectProperty ;
+    rdfs:domain mpo:Object ;
+    rdfs:label "Datum Einlieferung"@de .
+
+mpo:hatRevision a owl:ObjectProperty ;
+    rdfs:domain mpo:Object ;
+    rdfs:label "Revision"@de .
+
+mpo:hatFruehereErfassung a owl:ObjectProperty ;
+    rdfs:domain mpo:Object ;
+    rdfs:label "Frühere Erfassung"@de .
+
+mpo:Zustand a owl:ObjectProperty ;
+    rdfs:domain mpo:Object ;
+    rdfs:label "Zustand"@de .
+
+
+### funderfassung properties
+
+mpo:hatSachgruppe a owl:ObjectProperty ;
+    rdfs:domain mpo:Funderfassung ;
+    rdfs:label "Sachgruppe"@de .
+
+
+mpo:hatMaterial a owl:ObjectProperty ;
+    rdfs:domain mpo:Funderfassung ;
+    rdfs:label "Material"@de .
+
+mpo:hatErhaltung a owl:ObjectProperty ;
+    rdfs:domain mpo:Funderfassung ;
+    rdfs:label "Erhaltung"@de .
+
+mpo:hatRekonstruktion a owl:ObjectProperty ;
+    rdfs:domain mpo:Funderfassung ;
+    rdfs:label "Rekonstruktion"@de .
+
+
+
+
+mpo:hatMaterialanalyse a owl:ObjectProperty ;
+    rdfs:domain mpo:Funderfassung ;
+    rdfs:label "Materialanalyse"@de .
+
+
+mpo:hatDatierung a owl:ObjectProperty ;
+    rdfs:domain mpo:Funderfassung ;
+    rdfs:label "Datierung"@de .
+
+#datum
+
+#maße
+mpo:hatLaenge a owl:ObjectProperty ;
+    rdfs:domain mpo:Funderfassung ;
+    rdfs:label "Länge"@de .
+
+mpo:hatHoehe a owl:ObjectProperty ;
+    rdfs:domain mpo:Funderfassung ;
+    rdfs:label "Höhe"@de .
+
+mpo:hatBreite a owl:ObjectProperty ;
+    rdfs:domain mpo:Funderfassung ;
+    rdfs:label "Breite"@de .
+
+mpo:hatStaerke a owl:ObjectProperty ;
+    rdfs:domain mpo:Funderfassung ;
+    rdfs:label "Stärke"@de .
+
+mpo:hatGewicht a owl:ObjectProperty ;
+    rdfs:domain mpo:Funderfassung ;
+    rdfs:label "Gewicht"@de .
+
+mpo:hatDurchmesserKlein a owl:ObjectProperty ;
+    rdfs:domain mpo:Funderfassung ;
+    rdfs:label "Durchmesser (klein)"@de .
+
+mpo:hatDurchmesserGross a owl:ObjectProperty ;
+    rdfs:domain mpo:Funderfassung ;
+    rdfs:label "Durchmesser (groß)"@de .
+
+
+mpo:hatHerstellungstechnik a owl:ObjectProperty ;
+    rdfs:domain mpo:Herstellungsprozess ;
+    rdfs:label "Herstellungstechnik"@de .
+
+
+### herstellungsdetails properties
+mpo:hatVeredelung a owl:ObjectProperty ;
+    rdfs:domain mpo:Herstellungsdetail ;
+    rdfs:label "Veredelung"@de .
+
+mpo:hatAuflage a owl:ObjectProperty ;
+    rdfs:domain mpo:Herstellungsdetail ;
+    rdfs:label "Auflage"@de .
+
+mpo:hatEinlageTechnik a owl:ObjectProperty ;
+    rdfs:domain mpo:Herstellungsdetail ;
+    rdfs:label "Einlagetechnik"@de .
+
+mpo:hatEinlage a owl:ObjectProperty ;
+    rdfs:domain mpo:Herstellungsdetail ;
+    rdfs:label "Einlage"@de .
+
+### archivalie properties
+
+mpo:hatArchiv a owl:ObjectProperty ;
+    rdfs:domain mpo:Archivalie ;
+    rdfs:label "Archiv"@de .
+
+mpo:hatAktennummer a owl:ObjectProperty ;
+    rdfs:domain mpo:Archivalie ;
+    rdfs:label "Aktennummer"@de .
+
+mpo:hatObjekt a owl:ObjectProperty ;
+    rdfs:domain mpo:Archivalie ;
+    rdfs:label "Objekt"@de .
+
+mpo:hatArchivalientyp a owl:ObjectProperty ;
+    rdfs:domain mpo:Archivalie ;
+    rdfs:label "Archivalientyp"@de .
+
+mpo:hatBildformat a owl:ObjectProperty ;
+    rdfs:domain mpo:Archivalie ;
+    rdfs:label "Bildformat"@de .
+
+mpo:hatBildkategorie a owl:ObjectProperty; 
+    rdfs:domain mpo:Bildkategorie ;
+    rdfs:label "Bildkategorie"@de .
+
+mpo:hatSchriftformat a owl:ObjectProperty ;
+    rdfs:domain mpo:Archivalie ;
+    rdfs:label "Schriftformat"@de .
+
+mpo:hatSchriftkatgorie a owl:ObjectProperty ;
+    rdfs:domain mpo:Archivalie ;
+    rdfs:label "Schriftkategorie"@de .
+
+mpo:hatUeberlieferung a owl:ObjectProperty ;
+    rdfs:domain mpo:Archivalie ;
+    rdfs:label "Überlieferung"@de .
+
+### objektanalyse properties
+
+mpo:hatAnalyseMethode a owl:ObjectProperty ;
+    rdfs:domain mpo:Objektanalyse ;
+    rdfs:label "Analysemethode"@de .
+
+
+
+### zitation properites
+
+
+### referenzproperties
+
+mpo:partOfObject a owl:ObjectProperty ;
+    rdfs:label "Objekt"@de .
+
+mpo:partOfFunderfassung a owl:ObjectProperty ;
+    rdfs:label "Funderfassung"@de .
+
+mpo:partOfProductionProcess a owl:ObjectProperty ;
+    rdfs:label "Herstellungsprozess"@de .
+
+
+### general properties
+
+mpo:hatCode a owl:ObjectProperty ;
+    rdfs:label "Code"@de.
+
+mpo:hatElement a owl:ObjectProperty ;
+    rdfs:label "Element"@de .
+
+mpo:hatPublikation a owl:ObjectProperty ;
+    rdfs:label "Publikation"@de .
+
+mpo:hatBearbeiterin a owl:ObjectProperty ;
+    rdfs:label "Bearbeiterin"@de .
+
+mpo:hatOrt a owl:ObjectProperty ;
+    rdfs:label "Ort"@de .
+
+mpo:hatDatum a owl:ObjectProperty ;
+    rdfs:label "Datum"@de .
+
+mpo:hatArchivalie a owl:ObjectProperty ;
+    rdfs:label "Archivalie"@de .
+
+mpo:hatHerstellung a owl:ObjectProperty ;
+    rdfs:label "Herstellung"@de .
+
+mpo:hatBemerkung a owl:ObjectProperty ;
+    rdfs:label "Bemerkung"@de .
+
+mpo:hatLiteraturverweis a owl:ObjectProperty ;
+    rdfs:label "Literaturverweis"@de .
+
+mpo:hatLiteratur a owl:ObjectProperty ;
+    rdfs:label "Literatur"@de .
+
+mpo:hatReferenz a owl:ObjectProperty ;
+    rdfs:label "Referenz"@de .
+
+mpo:hatEmpfaenger a owl:ObjectProperty ;
+    rdfs:label "Empfänger"@de .
+
+mpo:hatTextauszug a owl:ObjectProperty ;
+    rdfs:label "Textauszug"@de .
